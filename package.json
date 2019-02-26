@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development",
+    "dev": "concurrently \"npm run dev:app\" \"npm run dev:client\"",
+    "dev:app": "webpack-dev-server --mode development",
+    "dev:client": "nodemon ./dev/index.js",
     "pack": "webpack --config webpack.config.js",
     "babel": "babel src -d dist",
     "build": "npm run pack && npm run babel"
@@ -28,9 +30,12 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
     "copy-webpack-plugin": "^5.0.0",
     "css-loader": "^2.1.0",
+    "express": "^4.16.4",
     "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.18.10",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.5",
