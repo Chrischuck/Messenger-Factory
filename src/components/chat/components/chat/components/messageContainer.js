@@ -1,14 +1,11 @@
 import React from 'react'
 
+import Message from './message'
 
-export default class extends React.Component {
-
-
-  render() {
-    return (
-      <div className="message-container" >
-        
-      </div>
-    )
-  }
-}
+export default ({ messages }) => (
+  <div className="message-container">
+    {
+      messages.map((m, i) => <Message key={m.sender + i + m.message[0] } data={m} />)
+    }
+  </div>
+)
