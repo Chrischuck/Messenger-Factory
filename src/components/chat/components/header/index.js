@@ -2,7 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { closeWidget } from '../../../modules/actions/widget'
+import './index.css'
+
+import { closeWidget } from '../../../../modules/actions/widget'
 
 const mapStateToProps = (state) => ({ widget: state.widget })
 const mapDispatchToProps = (dispatch) => bindActionCreators({ closeWidget }, dispatch)

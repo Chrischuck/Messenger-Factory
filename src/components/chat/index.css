@@ -25,24 +25,3 @@
   width: 100%;
   box-sizing: border-box;
 }
-
-.header-container {
-  background-color: hsl(344, 94%, 57%);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  height: 60px;
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 0px 10px;
-  justify-content: space-between;
-}
-
-.close-icon {
-  color: #ccc0c0a6;
-  cursor: pointer;
-}
-
-.close-icon:hover {
-  color: white;
-}
