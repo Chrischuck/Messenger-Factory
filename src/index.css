@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+html {
+  font-family: 'Lato', sans-serif;
+}
+
 .messenger-launcher {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 20px;
   width: 60px !important;
   height: 60px !important;
   border-radius: 50% !important;
@@ -11,4 +17,20 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+@keyframes fadeInRight {
+  0% {
+     transform: translateX(1000px);
+  }
+  100% {
+     transform: translateX(0);
+  }
+} 
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+  -webkit-animation-duration: .2s;
+  animation-duration: .2s;
 }
