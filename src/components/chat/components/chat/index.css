@@ -52,19 +52,28 @@
   color: hsl(344, 90%, 61%);
 }
 
-.message {
+.message-container {
   box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.message-inbound-container {
+  margin-left: auto;
+}
+
+.message {
+  background-color: hsl(344, 90%, 61%);
   border-radius: 20px;
   max-width: 100%;
-  background-color: #f8f8f8;
   padding: .5rem .75rem;
   white-space: pre-wrap;
   border-radius: 5px;
   word-wrap: break-word;
+  float: right;
+  display: inline-block;
 }
 
-.message-outbound {
-  background-color: hsl(344, 90%, 61%);
-  margin-left: auto;
+.message-inbound {
+  background-color: #f8f8f8;
+  float: left;
 }
-

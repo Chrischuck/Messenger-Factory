@@ -1,7 +1,7 @@
 import { OPEN, CLOSE } from '../actions/widget'
 
 const initialState = {
-  isChatOpen: !false
+  isChatOpen: false
 }
 
 export default function reducer(state = initialState, action) {
