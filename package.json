@@ -1,5 +1,5 @@
 {
-  "name": "react-chat-widget-boilerplate",
+  "name": "react-chat-messenger-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,6 +14,7 @@
   "dependencies": {
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
+    "react-redux": "^6.0.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },

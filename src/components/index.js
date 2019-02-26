@@ -1,20 +1,19 @@
 import React, { Fragment } from 'react'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import Launcher from './launcher'
 import Chat from './chat'
 
-export default class extends React.Component {
-  constructor(props) {
-    super(props)
 
-    this.state = {
-      isChatOpen: !true
-    }
-  }
-  
+const mapStateToProps = (state) => ({ widget: state.widget })
+const mapDispatchToProps = (dispatch) => bindActionCreators({}, dispatch)
+
+@connect(mapStateToProps, mapDispatchToProps)
+export default class extends React.Component {
   render() {
-    const { isChatOpen } = this.state
-    console.log(window.frameElement)
+    const { widget: { isChatOpen } } = this.props
+    
     return (
       <Fragment>
         {
