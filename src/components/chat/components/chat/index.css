@@ -1,7 +1,43 @@
 .conversation-container {
   flex: 1;
-  padding: 0 10px;
   -webkit-box-sizing: border-box; 
   -moz-box-sizing: border-box;
   box-sizing: border-box;    
+  display: flex;
+  flex-direction: column;
+}
+
+.message-container {
+  padding: 0 10px;
+  flex: 1;
+  overflow: scroll;
+}
+
+.text-box-container {
+  min-height: 55px;
+  max-height: 200px;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  align-items: center;
+}
+
+.text-box {
+  outline: none;
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  max-height: 190px;
+  width: 100%;
+  height: 100%;
+  line-height: 1.33;
+  resize: none;
+  overflow: auto;
+  border: 0;
+  font-size: 14px;
+  transition: background-color ease 200ms,box-shadow ease 200ms,-webkit-box-shadow ease 200ms;
+}
+
+.text-actions-container {
+  width: 25%;
 }
