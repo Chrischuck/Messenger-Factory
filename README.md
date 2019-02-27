@@ -11,4 +11,3 @@ Make your own chatbot for any website, anywhere.
 
 * [ ] Create build scripts that output client scripts + src code
 * [ ] Code Splitting
-* [ ] Server side rendering + better development environment
