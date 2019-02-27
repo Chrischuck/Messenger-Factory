@@ -1,18 +1,24 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const DotenvPlugin = require('webpack-dotenv-plugin');
 
-const webpackConfig = {
+const DIST_PATH = path.resolve(__dirname, '../dist/messenger');
+const ENTRY_PATH = path.resolve(__dirname, '../src/index.js');
+
+module.exports = [{
+  name: 'messenger-config',
+  mode: 'development',
   resolve: {
     modules: ['src', 'node_modules']
   },
   devtool: 'source-map',
   entry: {
     vendor: ['@babel/polyfill', 'react', 'react-dom'],
-    client:     './src/index.js',
+    client: ENTRY_PATH,
   },
   output: {
-    path: __dirname + '/dist/messenger',
+    path: DIST_PATH,
     filename: '[name].chunkhash.bundle.js',
     chunkFilename: '[name].chunkhash.bundle.js',
     publicPath: '/',
@@ -42,6 +48,10 @@ const webpackConfig = {
     port: 8080
   },
   plugins: [
+    new DotenvPlugin({
+      sample: './.env.default',
+      path: './.env'
+    }),
     new HtmlWebpackPlugin({
       title: 'React Chat Messenger',
       template: './src/index.html',
@@ -58,15 +68,4 @@ const webpackConfig = {
       }
     })
   ]
-};
-
-if (process.env.NODE_ENV !== 'production') {
-  webpackConfig.plugins.push(    
-    new DotenvPlugin({
-      sample: './.env.default',
-      path: './.env'
-    })
-  )
-}
-
-module.exports = webpackConfig;
+}];
