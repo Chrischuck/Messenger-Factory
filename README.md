@@ -18,5 +18,6 @@ Make your own chatbot for any website, anywhere.
 
 * [ ] Create build scripts that output client scripts + src code
 * [ ] Ensure all browser compatibility
-* [ ] Code Splitting
-* [ ] Decrease Package Size
+* [ ] Code splitting
+* [ ] Decrease package size
+* [ ] Fix file structure
