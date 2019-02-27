@@ -17,4 +17,5 @@ Make your own chatbot for any website, anywhere.
 # Todos
 
 * [ ] Create build scripts that output client scripts + src code
+* [ ] Ensure all browser compatibility
 * [ ] Code Splitting

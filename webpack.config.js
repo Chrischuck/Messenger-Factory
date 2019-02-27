@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const DotenvPlugin = require('webpack-dotenv-plugin');
 
-const webpackMessengerConfig = {
+const webpackConfig = {
   resolve: {
     modules: ['src', 'node_modules']
   },
@@ -12,7 +12,7 @@ const webpackMessengerConfig = {
     client:     './src/index.js',
   },
   output: {
-    path: __dirname + '/dist',
+    path: __dirname + '/dist/messenger',
     filename: '[name].chunkhash.bundle.js',
     chunkFilename: '[name].chunkhash.bundle.js',
     publicPath: '/',
@@ -69,4 +69,4 @@ if (process.env.NODE_ENV !== 'production') {
   )
 }
 
-module.exports = webpackMessengerConfig;
+module.exports = webpackConfig;
