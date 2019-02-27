@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const DotenvPlugin = require('webpack-dotenv-plugin');
 
-const webpackConfig = {
+const webpackMessengerConfig = {
   resolve: {
     modules: ['src', 'node_modules']
   },
@@ -69,4 +69,4 @@ if (process.env.NODE_ENV !== 'production') {
   )
 }
 
-module.exports = webpackConfig;
+module.exports = webpackMessengerConfig;
