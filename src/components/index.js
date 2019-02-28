@@ -14,7 +14,12 @@ export default class extends React.Component {
   constructor(props) {
     super(props)
 
-    console.log(window.location.search)
+    // @README
+    // All process.env stuff should float away and become actual values
+    // now how do we take this and build css from it....
+    console.log(process.env.MESSENGER_STYLES)
+
+    //console.log(window.location.search)
 
     this.state = {
 

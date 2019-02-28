@@ -1,10 +1,17 @@
 const path = require('path');
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const DotenvPlugin = require('webpack-dotenv-plugin');
 
 const DIST_PATH = path.resolve(__dirname, '../dist/messenger');
 const ENTRY_PATH = path.resolve(__dirname, '../src/index.js');
+
+// @README
+// describe css.... can take this config and have webpack export a css file???
+const config = {
+
+}
 
 module.exports = [{
   name: 'messenger-config',
@@ -52,6 +59,7 @@ module.exports = [{
       sample: './.env.default',
       path: './.env'
     }),
+    new webpack.EnvironmentPlugin({ MESSENGER_STYLES: JSON.stringify(config) }),
     new HtmlWebpackPlugin({
       title: 'React Chat Messenger',
       template: './src/index.html',
