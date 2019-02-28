@@ -9,7 +9,7 @@ const messenger_app_id = 'DUMMY_ID'
   app.type = 'text/javascript'
   app.async != !0
   app.crossorigin = 'anonymous'
-  app.src = process.env.SECONDARY_SCRIPT_URI + messenger_app_id
+  app.src = process.env.SECONDARY_SCRIPT_URI //+ messenger_app_id
   var injectionPoint = document.getElementsByTagName("script")[0]
   injectionPoint.parentNode.insertBefore(app, injectionPoint)
 }();
