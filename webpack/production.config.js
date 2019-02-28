@@ -68,30 +68,7 @@ module.exports = function(config = {}) {
       mode: 'production',
       entry: {
         client: ENTRY_PATH + '/scripts/client.js',
-      },
-      output: {
-        path: DIST_PATH + '/scripts',
-      },
-      module: {
-        rules: [
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            use: {
-              loader: "babel-loader",
-              options: {
-                presets: ["@babel/preset-env"]
-              }
-            }
-          },
-        ]
-      }
-    },
-    {
-      name: 'secondary-script-config',
-      mode: 'production',
-      entry: {
-        client: ENTRY_PATH + '/scripts/secondaryScript.js',
+        secondaryScript: ENTRY_PATH + '/scripts/secondaryScript.js',
       },
       output: {
         path: DIST_PATH + '/scripts',
