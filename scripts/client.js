@@ -1,3 +1,5 @@
+const messenger_app_id = 'DUMMY_ID'
+
 !function() {
   if (document.getElementById('messenger-widget')) {
     console.error('Messenger Already Rendered.')
