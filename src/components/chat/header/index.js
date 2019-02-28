@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 
 import './index.css'
 
-import { closeWidget } from '../../../../modules/actions/widget'
+import { closeWidget } from '../../../modules/actions/widget'
 
 const mapStateToProps = (state) => ({ widget: state.widget })
 const mapDispatchToProps = (dispatch) => bindActionCreators({ closeWidget }, dispatch)

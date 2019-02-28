@@ -8,7 +8,7 @@ import MessageContainer from './components/messageContainer'
 import TextBox from './components/textbox'
 
 
-import * as actions from '../../../../modules/actions/chat'
+import * as actions from '../../../modules/actions/chat'
 
 const mapStateToProps = (state) => ({ chat: state.chat })
 const mapDispatchToProps = (dispatch) => bindActionCreators(actions, dispatch)

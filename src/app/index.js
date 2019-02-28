@@ -2,8 +2,8 @@ import React, { Fragment } from 'react'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Launcher from './launcher'
-import Chat from './chat'
+import Launcher from '../components/launcher'
+import Chat from '../components/chat'
 
 
 const mapStateToProps = (state) => ({ widget: state.widget })

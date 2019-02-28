@@ -1,8 +1,8 @@
 import React from 'react'
 
 import './index.css'
-import Header from './components/header'
-import Chat from './components/chat'
+import Header from './header'
+import Body from './body'
 
 export default class extends React.Component {
   render() {
@@ -12,7 +12,7 @@ export default class extends React.Component {
         <div className="inner-chat-container">
           <div className="chat-content">
             <Header />
-            <Chat />
+            <Body />
           </div>
         </div>
       </div>
