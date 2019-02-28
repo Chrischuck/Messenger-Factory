@@ -18,26 +18,10 @@ export default class extends React.Component {
     // All process.env stuff should float away and become actual values
     // now how do we take this and build css from it....
     console.log(process.env.MESSENGER_STYLES)
-
-    //console.log(window.location.search)
-
-    this.state = {
-
-    }
   }
   render() {
     const { widget: { isChatOpen } } = this.props
     
-    return (
-      <Fragment>
-        {
-          isChatOpen && <Chat />
-        }
-
-        {
-          !isChatOpen && <Launcher />
-        }
-      </Fragment>
-    )
+    return (isChatOpen ? <Chat /> : <Launcher />)
   }
 }
