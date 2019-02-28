@@ -86,7 +86,10 @@ module.exports = function(config = {}) {
             }
           },
         ]
-      }
+      },
+      plugins: [
+        new webpack.EnvironmentPlugin(process.env || {})
+      ]
     }
   ]
 };
