@@ -7,8 +7,7 @@
     "dev": "concurrently \"npm run dev:app\" \"npm run dev:client\"",
     "dev:app": "webpack-dev-server --mode development --config ./webpack/dev.config.js",
     "dev:client": "nodemon ./dev/index.js",
-    "build": "webpack --config ./webpack/production.config.js",
-    "build-test": "node build.js"
+    "build": "webpack --config ./webpack/production.config.js"
   },
   "author": "",
   "license": "ISC",

@@ -4,6 +4,9 @@ html {
   font-family: 'Lato', sans-serif;
 }
 
+
+
+
 .messenger-launcher {
   position: fixed;
   bottom: 20px;
@@ -17,7 +20,30 @@ html {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: .2s;
+  animation-duration: .2s;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+} 
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: .2s;
+  animation-duration: .2s;
+}
+
+
 
 @keyframes fadeInRight {
   0% {

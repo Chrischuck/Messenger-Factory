@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const DotenvPlugin = require('webpack-dotenv-plugin');
 
+const ROOT_PATH = path.resolve(__dirname, '../');
 const DIST_PATH = path.resolve(__dirname, '../dist/messenger');
 const ENTRY_PATH = path.resolve(__dirname, '../src/index.js');
 
@@ -56,8 +57,8 @@ module.exports = [{
   },
   plugins: [
     new DotenvPlugin({
-      sample: './.env.default',
-      path: './.env'
+      sample: ROOT_PATH +'/.env.default',
+      path: ROOT_PATH + '/.env'
     }),
     new webpack.EnvironmentPlugin({ MESSENGER_STYLES: JSON.stringify(config) }),
     new HtmlWebpackPlugin({

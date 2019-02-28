@@ -1,4 +1,9 @@
 const webpack = require('webpack');
-const config = require('./webpack/production.config')
+const webpackConfigGenerator = require('./webpack/production.config')
 
-webpack(config)
+const config = {
+  APP_ID: 'TEST_ID'
+}
+
+
+webpack(webpackConfigGenerator(config), console.log)
