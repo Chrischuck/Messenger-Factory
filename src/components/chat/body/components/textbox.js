@@ -13,6 +13,10 @@ export default class extends React.Component {
   }
   
 	onChange = (event) => {		
+    if (!event.target.value) {
+      return
+    }
+    
 		const previousRows = event.target.rows;
   	event.target.rows = 1
 		
@@ -31,7 +35,7 @@ export default class extends React.Component {
   
   onClick = (e) => {
     this.props.sendMessage({ message: this.state.message })
-    this.setState({ message: '' })
+    this.setState({ message: '', rows: 1 })
   }
 
   render() {
