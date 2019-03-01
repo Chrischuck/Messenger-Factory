@@ -4,13 +4,9 @@ html {
   font-family: 'Lato', sans-serif;
 }
 
-
-
-
 .messenger-launcher {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  margin: 0px 10px;
   width: 60px !important;
   height: 60px !important;
   border-radius: 50% !important;

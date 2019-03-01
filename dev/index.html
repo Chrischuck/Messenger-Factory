@@ -3,50 +3,41 @@
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <head>
       <meta charset="utf-8">
-
-      <style>
-        .messenger-container {
-          z-index: 999999999 !important;
-          position: fixed !important;
-          bottom: 0px;
-          right: 0px;
-          border: 0;
-          width: 90px;
-          height: 80px;
-          max-height: 100vh;
-          max-width: 100vw;
-        }
-      </style>
-
     </head>
     <body>
 
       <script>
+        !function() {
+          var iframe = document.createElement('iframe')
+          iframe.id = 'messenger-widget'
+          iframe.style = "z-index: 999999999 !important;position: fixed !important;bottom: 20px;right: 20px;border: 0;width: 80px;height: 80px;max-height: 100vh;max-width: 100vw;padding-top: 10px;box-sizing: border-box;"
+          iframe.src = "http://localhost:8080"
+          var injectionPoint = document.getElementsByTagName("body")[0]
+          injectionPoint.appendChild(iframe)
 
-        window.addEventListener("message", receiveMessage, false);
-        function receiveMessage(event) {
+          window.addEventListener("message", receiveMessage, false);
+          function receiveMessage(event) {
 
-          /*
-          if (event.origin !== "http://localhost:8080/") {
-            return
-          }*/
-          const iframe = document.getElementById('messenger-widget')
-          switch (event.data) {
-            case 'OPEN':
-              iframe.style.height = '80%'
-              iframe.style.width = '400px'
+            /*
+            if (event.origin !== "http://localhost:8080/") {
               return
-            case 'CLOSE':
-              iframe.style.height = '80px'
-              iframe.style.width = '90px'
-              return
-            default:
-              return
+            }*/
+            var iframe = document.getElementById('messenger-widget')
+            switch (event.data) {
+              case 'OPEN':
+                iframe.style.height = '80%'
+                iframe.style.width = '400px'
+                return
+              case 'CLOSE':
+                iframe.style.height = '80px'
+                iframe.style.width = '80px'
+                return
+              default:
+                return
+            }
           }
-        }
+        }();
       </script>
-
-      <iframe id="messenger-widget" crossorigin="anonymous" class="messenger-container" src="http://localhost:8080?app_id=123"></iframe>
 
     </body>
   </meta>
