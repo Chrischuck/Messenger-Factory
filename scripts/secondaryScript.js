@@ -25,6 +25,6 @@
 var iframe = document.createElement('iframe')
 iframe.id = 'messenger-widget'
 iframe.style = "z-index: 999999999 !important;position: fixed !important;bottom: 20px;right: 20px;border: 0;width: 80px;height: 80px;max-height: 100vh;max-width: 100vw;padding-top: 10px;box-sizing: border-box;"
-iframe.src = process.env.API_URI
+iframe.src = process.env.APP_URI
 var injectionPoint = document.getElementsByTagName("body")[0]
 injectionPoint.appendChild(iframe)
