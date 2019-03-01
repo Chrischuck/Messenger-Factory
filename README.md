@@ -30,4 +30,5 @@ Make your chat messengers for any website, anywhere.
 * [ ] Code splitting
 * [ ] Decrease package size
 * [ ] Fix file structure
-* [ ] Responsive to screen size
+* [x] Responsive to screen size
+* [ ] Minify CSS
