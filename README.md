@@ -25,6 +25,8 @@ Make your chat messengers for any website, anywhere.
 
 # Todos
 
+## Build System Goals V1
+
 * [x] Create build scripts that output client scripts + src code
 * [ ] Ensure all browser compatibility
 * [ ] Code splitting
@@ -33,3 +35,9 @@ Make your chat messengers for any website, anywhere.
 * [x] Responsive to screen size
 * [ ] Minify CSS
 * [ ] Unit Tests 😱
+
+## App Goals V1
+
+* [ ] Extensible and robust Message mapping language
+* [ ] Configurable for web sockets OR REST
+* [ ] Make it look good 😍
