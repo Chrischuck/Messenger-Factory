@@ -1,6 +1,8 @@
 const webpack = require('webpack');
 const webpackConfigGenerator = require('./webpack/production.config')
 
-module.exports = function(config = {}, callback = function() {}) {
+function messengerFactory(config = {}, callback = function() {}) {
   return webpack(webpackConfigGenerator(config), callback)
 }
+
+module.exports = messengerFactory

@@ -44,7 +44,7 @@ module.exports = function(config = {}) {
       },
       plugins: [
         new webpack.EnvironmentPlugin(process.env || {}), // pass enviornment vars thru
-        new webpack.EnvironmentPlugin(JSON.stringify(config)),
+        new webpack.EnvironmentPlugin(config),
         new HtmlWebpackPlugin({
           title: 'React Chat Messenger',
           template: './src/index.html',
@@ -88,7 +88,7 @@ module.exports = function(config = {}) {
       },
       plugins: [
         new webpack.EnvironmentPlugin(process.env || {}),
-        new webpack.EnvironmentPlugin(JSON.stringify(config)),
+        new webpack.EnvironmentPlugin(config),
       ]
     }
   ]
