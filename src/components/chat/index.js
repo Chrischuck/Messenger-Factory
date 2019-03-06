@@ -2,7 +2,10 @@ import React from 'react'
 
 import './index.css'
 import Header from './header'
-import Body from './body'
+
+const Body = React.lazy(() => import('./body'));
+import BodyLoader from './body/loading'
+
 
 export default class extends React.Component {
   render() {
@@ -12,7 +15,9 @@ export default class extends React.Component {
         <div className="inner-chat-container">
           <div className="chat-content">
             <Header />
-            <Body />
+            <React.Suspense fallback={BodyLoader()}>
+              <Body />
+            </React.Suspense>
           </div>
         </div>
       </div>
