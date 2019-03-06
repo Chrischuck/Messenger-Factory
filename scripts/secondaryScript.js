@@ -1,41 +1,6 @@
 !function() {
-  var css = `
-    #messenger-widget {
-      z-index: 999999999 !important;
-      position: fixed !important;
-      bottom: 20px;
-      right: 20px;
-      border: 0;
-      width: 80px;
-      height: 80px;
-      max-height: 100vh;
-      max-width: 100vw;
-      padding-top: 10px;
-      box-sizing: border-box;
-    }
+  var css = `#messenger-widget{z-index:999999999!important;position:fixed!important;bottom:20px;right:20px;border:0;width:80px;height:80px;max-height:100vh;max-width:100vw;padding-top:10px;box-sizing:border-box;}.messenger-open{height:80%!important;width:400px!important;bottom:0!important;right:0!important;}@media(max-width:450px){#messenger-widget{bottom:0;right:0;}.messenger-open{height:100%!important;width:100%!important;}.messenger-closed{bottom:20px!important;right:20px!important;}}`
 
-    .messenger-open {
-      height: 80% !important;
-      width: 400px !important;
-      bottom: 0 !important;
-      right: 0 !important;
-    }
-
-    @media (max-width: 450px) {
-      #messenger-widget {
-        bottom: 0;
-        right: 0;
-      }
-      .messenger-open {
-        height: 100% !important;
-        width: 100% !important;
-      }
-      .messenger-closed {
-        bottom: 20px !important;
-        right: 20px !important;
-      }
-    }
-  `
   var style = document.createElement('style');
   style.type = 'text/css';
   style.appendChild(document.createTextNode(css));
